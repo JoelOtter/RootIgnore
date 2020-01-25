@@ -32,7 +32,7 @@ function! s:WildignoreFromGitignore(gitpath, isAtRoot)
       if a:isAtRoot
         " If line starts with a '/', remove it
         if line =~ '^/'
-          let line = substitute(line, '/', '', '')
+          let line = substitute(line, '/', '*/', '')
         endif
 
         if line =~ '/$' 
